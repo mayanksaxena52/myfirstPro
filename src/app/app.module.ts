@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login.component';
 import { RegisterComponent } from './register.component';
 import { AppRoutingModule } from './app.routing';
+import { AngularMaterialModule } from './angular-material.module';
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,AppRoutingModule,ReactiveFormsModule ],
+  imports:      [ BrowserModule, FormsModule,AppRoutingModule,ReactiveFormsModule,AngularMaterialModule ],
   declarations: [ AppComponent ,LoginComponent,RegisterComponent],
   bootstrap:    [ AppComponent ]
 })
