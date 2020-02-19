@@ -2,11 +2,11 @@ import { Component, Input,OnInit } from '@angular/core';
 
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder,FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'login',
    templateUrl: './login.html',
-  styles: [`h1 { font-family: Lato; }`]
+  styleUrls: [`./login.css`]
 })
 export class LoginComponent  implements OnInit{
    loginForm: FormGroup;
@@ -17,16 +17,30 @@ export class LoginComponent  implements OnInit{
     ) {
      
     }
- ngOnInit() {
-        this.loginForm = this.formBuilder.group({
-            username: ['', Validators.required],
-            password: ['', Validators.required]
-        });
+  ngOnInit() {
+//         this.loginForm = this.formBuilder.group({
+//             username: ['', Validators.required],
+//             password: ['', Validators.required]
+        };
 
-        // get return url from route parameters or default to '/'
+//         // get return url from route parameters or default to '/'
+//     }
+//   cookBacon(){
+// //this.name="mayank";
+// this.router.navigate(['/register']);
+// }
+ form: FormGroup = new FormGroup({
+    username: new FormControl(''),
+    password: new FormControl(''),
+  });
+
+  submit() {
+    if (this.form.valid) {
+      console.log('sdsss '+ this.form.value.password)
+     // this.submitEM.emit(this.form.value);
     }
-  cookBacon(){
-//this.name="mayank";
-this.router.navigate(['/register']);
-}
+  }
+  @Input() error: string | null;
+
+  //@Output() submitEM = new EventEmitter();
 }

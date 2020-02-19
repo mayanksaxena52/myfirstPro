@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
 import { MatBadgeModule } from "@angular/material/badge";
@@ -23,6 +24,7 @@ import { MatPaginatorModule } from "@angular/material/paginator";
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    MatCardModule,
     MatSidenavModule,
     MatBadgeModule,
     MatListModule,
@@ -41,6 +43,7 @@ import { MatPaginatorModule } from "@angular/material/paginator";
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    MatCardModule,
     MatSidenavModule,
     MatBadgeModule,
     MatListModule,
