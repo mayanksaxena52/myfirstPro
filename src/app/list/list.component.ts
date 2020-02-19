@@ -4,11 +4,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { FormBuilder,FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
-  selector: 'login',
-   templateUrl: './login.html',
-  styleUrls: [`./login.css`]
+  selector: 'list',
+   templateUrl: './list.html',
+  styleUrls: [`./list.css`]
 })
-export class LoginComponent  implements OnInit{
+export class ListComponent  implements OnInit{
    loginForm: FormGroup;
  constructor(
    private formBuilder: FormBuilder,
@@ -37,7 +37,7 @@ export class LoginComponent  implements OnInit{
   submit() {
     if (this.form.valid) {
       console.log('sdsss '+ this.form.value.password);
-      this.router.navigate(['/sidenav']);
+      this.router.navigate(['/register']);
      // this.submitEM.emit(this.form.value);
     }
   }
