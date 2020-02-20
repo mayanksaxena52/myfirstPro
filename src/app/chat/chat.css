@@ -1,0 +1,55 @@
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+
+.example-full-width {
+  width: 100%;
+} .example-item {
+        
+  margin: 30px;
+}.example-card {
+        
+  margin: 20px;
+   padding: 7px;
+   width: 100% ;
+}.nav-list{
+  height: 600px;
+  margin-bottom: 10px;
+   flex-grow: 1;
+    border: 3px solid green;
+    overflow: auto;
+}.app-class .mat-list-item {
+  height: auto;
+}.bubble {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #3c4252;
+    color: #fff;
+    padding: 10px;
+}.bubble-right {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 5px; 
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #3c4252;
+    color: #fff;
+    padding: 10px;
+    white-space: pre-wrap;
+}.message-row {
+    white-space: pre-wrap;
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: end;
+    justify-content: flex-start;
+    padding: 10 16px 4px ;
+}

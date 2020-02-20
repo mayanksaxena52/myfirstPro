@@ -1,1 +1,46 @@
-<p>chat</p>
+
+<div>
+  <mat-card class="card-container" >
+  <mat-card-header (click)="chat(user)">
+  
+    <mat-card-title >Chat App</mat-card-title>
+      <div mat-card-avatar class="example-header-image" float="right"></div>
+      <mat-card-subtitle>Status</mat-card-subtitle>
+  </mat-card-header>
+  </mat-card>
+ <mat-divider></mat-divider>
+
+<div class="basic-container">
+	<mat-nav-list class="nav-list">
+		<mat-list-item  *ngFor="let i of data">
+      <div class="bubble">
+			<div  mat-line>
+				{{ i.name }}
+			</div>
+      
+	</div>
+  
+		</mat-list-item>
+		
+	</mat-nav-list>
+</div>
+
+<div class="bubble-right">
+<div class="message-row">hiiiiii</div>
+</div>
+
+ <mat-divider></mat-divider>
+
+</div>
+<div>
+ <mat-form-field class="example-full-width">
+    <mat-label>Type your message here</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+     <button mat-icon-button matSuffix >
+      <mat-icon class="icon-button">send</mat-icon>
+    </button>
+  </mat-form-field>
+
+</div>
+
+

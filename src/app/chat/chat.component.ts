@@ -34,6 +34,52 @@ export class ChatComponent  implements OnInit{
       username: 'Microsoft',
       info: "Be what's next.",
      
+    }, {
+      
+      username: 'Angular',
+      info: 'One framework. Mobile & desktop.',
+     
+    },
+    {
+     
+      username: 'Facebook',
+      info: 'Facebook helps you connect and share with the people in your life.',
+   
+    },
+    {
+    
+      username: 'Google',
+      info: "Google search - I'm feeling lucky.",
+    
+    },
+    {
+     
+      username: 'Microsoft',
+      info: "Be what's next.",
+     
+    }, {
+      
+      username: 'Angular',
+      info: 'One framework. Mobile & desktop.',
+     
+    },
+    {
+     
+      username: 'Facebook',
+      info: 'Facebook helps you connect and share with the people in your life.',
+   
+    },
+    {
+    
+      username: 'Google',
+      info: "Google search - I'm feeling lucky.",
+    
+    },
+    {
+     
+      username: 'Microsoft',
+      info: "Be what's next.",
+     
     },
   ]
  constructor(
@@ -43,11 +89,22 @@ export class ChatComponent  implements OnInit{
     ) {
      
     }
-  ngOnInit() {
+    
+  data: any[] = [];
+
+
+  ngOnInit(): void {
+    for (let i = 1; i <= 20; i++) {
+      const item = { id: i, name: `Person ${i}`, email: `person${i}@gmail.com` };
+
+      this.data.push(item);
+    }
+  }
+  // ngOnInit() {
 //         this.loginForm = this.formBuilder.group({
 //             username: ['', Validators.required],
 //             password: ['', Validators.required]
-        };
+        // };
 
 //         // get return url from route parameters or default to '/'
 //     }

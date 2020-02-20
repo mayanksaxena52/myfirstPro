@@ -12,7 +12,7 @@ constructor(
         private route: ActivatedRoute,
         private router: Router
     ) {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/chat']);
     }
 
 }
