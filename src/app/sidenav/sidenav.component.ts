@@ -17,7 +17,7 @@ export class SideNav implements OnInit {
     constructor(@Inject(DOCUMENT) private document: Document) {}
 
     public ngOnInit() {
-        this.createThemeStyle();
+       this.createThemeStyle();
     }
 
    @HostListener("window:message", ["$event"])

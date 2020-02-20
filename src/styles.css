@@ -2,9 +2,7 @@
 /* Add application styles & imports to this file! */
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
-/* @import '~igniteui-angular/lib/core/styles/themes/index'; */
-@include igx-core();
-@include igx-theme($default-palette);
+
 
 * {
   box-sizing: border-box;
