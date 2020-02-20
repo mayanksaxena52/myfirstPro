@@ -1,1 +1,15 @@
-<p>list</p>
+<mat-nav-list >
+    <mat-list-item *ngFor="let user of users" class="example-item" >
+       
+      <mat-card  class="example-card" >
+  <mat-card-header (click)="chat(user)">
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{user.username}}</mat-card-title>
+    <mat-card-subtitle>{{user.info}}</mat-card-subtitle>
+  </mat-card-header>
+ <mat-divider></mat-divider>
+
+
+</mat-card>
+    </mat-list-item>
+  </mat-nav-list>

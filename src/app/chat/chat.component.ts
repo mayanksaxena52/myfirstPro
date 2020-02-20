@@ -4,11 +4,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { FormBuilder,FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
-  selector: 'list',
-   templateUrl: './list.html',
-  styleUrls: [`./list.css`]
+  selector: 'chat',
+   templateUrl: './chat.html',
+  styleUrls: [`./chat.css`]
 })
-export class ListComponent  implements OnInit{
+export class ChatComponent  implements OnInit{
    loginForm: FormGroup;
    users: any= [
     {
@@ -62,7 +62,7 @@ export class ListComponent  implements OnInit{
 
 chat(user){
    console.log(user.username);
-   this.router.navigate(['/chat']);
+   this.router.navigate(['/register']);
 }
   submit() {
     console.log('dfdfd')

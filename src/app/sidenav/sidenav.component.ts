@@ -1,6 +1,7 @@
 import { DOCUMENT } from "@angular/common";
-import { Component, HostListener, Inject, OnInit } from "@angular/core";
-
+import { Component, HostListener, Inject, OnInit,ViewChild } from "@angular/core";
+import { IgxNavigationDrawerComponent } from 'igniteui-angular';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
     selector: "nav-drawer-simple",
     styleUrls: ["./sidenav.css"],
@@ -13,13 +14,17 @@ export class SideNav implements OnInit {
     private styleElem: HTMLStyleElement;
     private typefacesLoaded = ["Titillium Web", "Roboto"];
     private typefaceUrl = "https://fonts.googleapis.com/css?family=";
-
-    constructor(@Inject(DOCUMENT) private document: Document) {}
+  @ViewChild(IgxNavigationDrawerComponent) public navdrawer: IgxNavigationDrawerComponent;
+    constructor(@Inject(DOCUMENT) private document: Document, private route: ActivatedRoute,
+        private router: Router) {}
 
     public ngOnInit() {
        this.createThemeStyle();
+       console.log(this.navdrawer);
     }
-
+public navigate(item) {
+    this.router.navigate(['/list']);
+  }
    @HostListener("window:message", ["$event"])
     private onMessage(e: MessageEvent) {
         if (e.origin === e.data.origin && typeof e.data.themeStyle === "string") {

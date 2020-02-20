@@ -12,12 +12,14 @@ import { AngularMaterialModule } from './material.module';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { ChatComponent } from './chat/chat.component';
 import { 
 	IgxButtonModule,
 	IgxIconModule,
 	IgxNavigationDrawerModule,
 	IgxRippleModule,
-	IgxToggleModule
+	IgxToggleModule,
+  IgxNavigationDrawerComponent
  } from "igniteui-angular";
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule,ReactiveFormsModule,AngularMaterialModule,BrowserAnimationsModule,IgxButtonModule,
@@ -25,7 +27,7 @@ import {
 	IgxNavigationDrawerModule,
 	IgxRippleModule,
 	IgxToggleModule ],
-  declarations: [ AppComponent ,LoginComponent,RegisterComponent,ListComponent,SideNav],
+  declarations: [ AppComponent ,LoginComponent,RegisterComponent,ListComponent,SideNav,ChatComponent],
   bootstrap:    [ AppComponent ],
    schemas: [CUSTOM_ELEMENTS_SCHEMA],
    providers: [],
