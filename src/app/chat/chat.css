@@ -32,11 +32,11 @@
     padding: 10px;
 }.bubble-right {
     border-top-left-radius: 20px;
-    border-bottom-left-radius: 5px; 
+    border-bottom-right-radius: 5px; 
     border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: #3c4252;
-    color: #fff;
+    border-bottom-left-radius: 20px;
+    background-color: #e0e0e0;
+    color: #3c4252;
     padding: 10px;
     white-space: pre-wrap;
 }.message-row {
