@@ -52,4 +52,8 @@
     -webkit-box-pack: end;
     justify-content: flex-start;
     padding: 10 16px 4px ;
+}.right-bubble{
+
+    display: flex    ;
+   justify-content: flex-end;
 }
