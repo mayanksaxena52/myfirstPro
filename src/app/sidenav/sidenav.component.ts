@@ -2,6 +2,7 @@ import { DOCUMENT } from "@angular/common";
 import { Component, HostListener, Inject, OnInit,ViewChild } from "@angular/core";
 import { IgxNavigationDrawerComponent } from 'igniteui-angular';
 import { Router, ActivatedRoute } from '@angular/router';
+import {AppUtill} from '../utill/app-utill';
 @Component({
     selector: "nav-drawer-simple",
     styleUrls: ["./sidenav.css"],
@@ -16,7 +17,9 @@ export class SideNav implements OnInit {
     private typefaceUrl = "https://fonts.googleapis.com/css?family=";
   @ViewChild(IgxNavigationDrawerComponent) public navdrawer: IgxNavigationDrawerComponent;
     constructor(@Inject(DOCUMENT) private document: Document, private route: ActivatedRoute,
-        private router: Router) {}
+        private router: Router) {
+          AppUtill.show=false;
+        }
 
     public ngOnInit() {
        this.createThemeStyle();

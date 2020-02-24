@@ -1,15 +1,17 @@
+
 import { Component, Input,OnInit } from '@angular/core';
 
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { FormBuilder,FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
-  selector: 'login',
-   templateUrl: './login.html',
-  styleUrls: [`./login.css`]
+  selector: 'register',
+   templateUrl: './register.component.html',
+   styleUrls: [`./register.css`]
 })
-export class LoginComponent  implements OnInit{
-   loginForm: FormGroup;
+export class RegisterComponent  {
+
+ loginForm: FormGroup;
  constructor(
    private formBuilder: FormBuilder,
         private route: ActivatedRoute,
@@ -30,18 +32,19 @@ export class LoginComponent  implements OnInit{
 // this.router.navigate(['/register']);
 // }
  form: FormGroup = new FormGroup({
-    username: new FormControl(''),
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+     email: new FormControl(''),
+     username: new FormControl(''),
     password: new FormControl(''),
   });
 
   submit() {
     if (this.form.valid) {
       console.log('sdsss '+ this.form.value.password);
-      this.router.navigate(['/sidenav']);
+      this.router.navigate(['/login']);
      // this.submitEM.emit(this.form.value);
     }
   }
   @Input() error: string | null;
-
-  //@Output() submitEM = new EventEmitter();
 }
