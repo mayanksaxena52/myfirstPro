@@ -1,11 +1,10 @@
-* 
+*.example-item {
+        margin:22px;
+      
 
-      .example-item {
-        
-  margin: 30px;
 }.example-card {
         
-  margin: 20px;
+margin-bottom: 25px;
    padding: 7px;
    width: 100% ;
 }
