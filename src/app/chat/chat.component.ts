@@ -122,7 +122,7 @@ export class ChatComponent  implements OnInit{
     username: new FormControl(''),
     password: new FormControl(''),
   });
-
+msg:string;
 chat(user){
    console.log(user.username);
    this.router.navigate(['/register']);
@@ -133,5 +133,10 @@ chat(user){
   }
   @Input() error: string | null;
 
+sendMsg(){
+   const item = { id: 12, name: this.msg,  style: 'right',left:false };
+
+      this.data.push(item);
+}
   //@Output() submitEM = new EventEmitter();
 }

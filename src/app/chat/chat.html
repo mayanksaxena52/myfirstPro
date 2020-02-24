@@ -13,15 +13,10 @@
 <div >
  
 	<mat-nav-list class="nav-list">
-     <mat-list-item class="left" role="listitem">
-   LEFT
-  </mat-list-item>
-  <mat-list-item class="right"  role="listitem">
-     Right
-  </mat-list-item>
+    
 		<mat-list-item  *ngFor="let i of data"  class={{i.style}}>
 
-  <div *ngIf="i.left" class="left">  <p class="time-stamp-left">16:10</p> <div class="bubble">
+  <div *ngIf="i.left" class="left">  <p class="time-stamp">16:10</p> <div class="bubble">
 			<div   mat-line>
 			{{ i.name }}
 			</div>
@@ -29,10 +24,10 @@
       
 	</div>
 
-<div *ngIf="!i.left"  class="right-bubble right" >
+<div *ngIf="!i.left"  class="right-bubble" >
   <div>
-<div class="bubble-right">hiiiiiiiiiiiiiiiii</div>
-</div><h6 class="time-stamp">16:10</h6>
+<div class="bubble-right">	{{ i.name }}</div>
+</div><p class="time-stamp">16:10</p>
 </div>
 
 		</mat-list-item>
@@ -40,13 +35,6 @@
 	</mat-nav-list>
 </div>
 
-<div class="right-bubble" >
-  <div>
-<div class="bubble-right">
-<div >hiiiiiiiiiiiiiiiiiiiiiiiiiiii</div>
-</div>
-</div><h6 class="time-stamp">16:10</h6>
-</div>
 
  <mat-divider></mat-divider>
 
@@ -54,8 +42,8 @@
 <div>
  <mat-form-field class="example-full-width">
     <mat-label>Type your message here</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-     <button mat-icon-button matSuffix >
+    <textarea matInput placeholder="Ex. It makes me feel..." [(ngModel)]='msg'></textarea>
+     <button mat-icon-button matSuffix  (click)="sendMsg()">
       <mat-icon class="icon-button">send</mat-icon>
     </button>
   </mat-form-field>

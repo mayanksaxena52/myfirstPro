@@ -28,7 +28,7 @@
     background-color: #3c4252;
     color: #fff;
     padding: 10px;
-    margin-left: 35px;
+    margin-left: 15px;
     white-space: pre-wrap;
     float:left;
 }.bubble-right {
@@ -41,6 +41,7 @@
     color: #3c4252;
     padding: 10px;
     white-space: pre-wrap;
+    margin-right: 5px
 }.message-row {
     white-space: pre-wrap;
     position: relative;
@@ -59,9 +60,6 @@
     display: flex    ;
    justify-content: flex-end;
 }.time-stamp{
-   
-    size:6px;
-}.time-stamp-left{
    float:left;
   text-align: top;
   padding-top: 15px;
