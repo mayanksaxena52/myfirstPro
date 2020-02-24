@@ -94,10 +94,16 @@ export class ChatComponent  implements OnInit{
 
 
   ngOnInit(): void {
-    for (let i = 1; i <= 20; i++) {
-      const item = { id: i, name: `Person ${i}`, email: `person${i}@gmail.com` };
+    for (let i = 1; i <= 15; i++) {
+      if(i%2==0&&i>5){
+      const item = { id: i, name: `Person ${i}`, email: `person${i}@gmail.com`, style: 'left',left:true };
 
       this.data.push(item);
+      }else{
+        const item = { id: i, name: `Person ${i}`, email: `person${i}@gmail.com`, style: 'right',left:false };
+
+      this.data.push(item);
+      }
     }
   }
   // ngOnInit() {

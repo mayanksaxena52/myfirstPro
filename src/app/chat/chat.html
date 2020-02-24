@@ -10,25 +10,44 @@
   </mat-card>
  <mat-divider></mat-divider>
 
-<div class="basic-container">
+<div >
+ 
 	<mat-nav-list class="nav-list">
-		<mat-list-item  *ngFor="let i of data">
-      <div class="bubble">
-			<div  mat-line>
-				{{ i.name }}
+     <mat-list-item class="left" role="listitem">
+   LEFT
+  </mat-list-item>
+  <mat-list-item class="right"  role="listitem">
+     Right
+  </mat-list-item>
+		<mat-list-item  *ngFor="let i of data"  class={{i.style}}>
+
+  <div *ngIf="i.left" class="left">  <p class="time-stamp-left">16:10</p> <div class="bubble">
+			<div   mat-line>
+			{{ i.name }}
 			</div>
+      </div>
       
 	</div>
-  
+
+<div *ngIf="!i.left"  class="right-bubble right" >
+  <div>
+<div class="bubble-right">hiiiiiiiiiiiiiiiii</div>
+</div><h6 class="time-stamp">16:10</h6>
+</div>
+
 		</mat-list-item>
 		
 	</mat-nav-list>
 </div>
-<div class="right-bubble" align=right>
+
+<div class="right-bubble" >
+  <div>
 <div class="bubble-right">
-<div class="message-row">hiiii</div>
+<div >hiiiiiiiiiiiiiiiiiiiiiiiiiiii</div>
 </div>
+</div><h6 class="time-stamp">16:10</h6>
 </div>
+
  <mat-divider></mat-divider>
 
 </div>

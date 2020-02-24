@@ -17,8 +17,6 @@
 }.nav-list{
   height: 600px;
   margin-bottom: 10px;
-   flex-grow: 1;
-    border: 3px solid green;
     overflow: auto;
 }.app-class .mat-list-item {
   height: auto;
@@ -30,7 +28,9 @@
     background-color: #3c4252;
     color: #fff;
     padding: 10px;
+    margin-left: 35px
 }.bubble-right {
+  
     border-top-left-radius: 20px;
     border-bottom-right-radius: 5px; 
     border-top-right-radius: 20px;
@@ -56,4 +56,12 @@
 
     display: flex    ;
    justify-content: flex-end;
+}.time-stamp{
+   
+    size:6px;
+}.time-stamp-left{
+   float:left;
+  text-align: top;
+  padding-top: 15px;
+  font-size: 12px;
 }
