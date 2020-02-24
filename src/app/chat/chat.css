@@ -28,7 +28,9 @@
     background-color: #3c4252;
     color: #fff;
     padding: 10px;
-    margin-left: 35px
+    margin-left: 35px;
+    white-space: pre-wrap;
+    float:left;
 }.bubble-right {
   
     border-top-left-radius: 20px;
