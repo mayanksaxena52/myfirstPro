@@ -36,6 +36,12 @@ export class LoginComponent  implements OnInit{
 
   
   @Input() error: string | null;
-
+submit() {
+    // if (this.form.valid) {
+    //   console.log('sdsss '+ this.form.value.password);
+      this.router.navigate(['/list']);
+     // this.submitEM.emit(this.form.value);
+    // }
+  }
   //@Output() submitEM = new EventEmitter();
 }

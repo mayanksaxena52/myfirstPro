@@ -4,7 +4,7 @@ import { IgxNavigationDrawerComponent } from 'igniteui-angular';
 import { Router, ActivatedRoute } from '@angular/router';
 import {AppUtill} from '../utill/app-utill';
 @Component({
-    selector: "nav-drawer-simple",
+    selector: "side-nav",
     styleUrls: ["./sidenav.css"],
     templateUrl: "./sidenav.html"
 })

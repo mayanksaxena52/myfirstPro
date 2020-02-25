@@ -28,12 +28,6 @@ constructor(
 public navigate(item) {
     this.router.navigate(['/list']);
   }
-submit() {
-    // if (this.form.valid) {
-    //   console.log('sdsss '+ this.form.value.password);
-      this.router.navigate(['/list']);
-     // this.submitEM.emit(this.form.value);
-    // }
-  }
+
 }
  
