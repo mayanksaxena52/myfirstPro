@@ -57,8 +57,8 @@
           
          <p>
             <mat-form-field  floatPlaceholder="always">
-              <input type="password" matInput placeholder="Confirm Password" formControlName="cnf_password" (input)="onChange($event.target.value)">
-          <div *ngIf="submitted" class="error">
+              <input type="password" matInput placeholder="Confirm Password" formControlName="cnf_password" (input)="onCnfPswdChange($event.target.value)">
+          <div *ngIf="true" class="error">
                         <div *ngIf="cnfpassword_reuire">Confirm Password is required</div>
                         <div *ngIf="cnf_password_val">Passwords must match</div>
                     </div>

@@ -30,8 +30,7 @@ export class RegisterComponent {
     this.loginForm = this.formBuilder.group({
       firstName: ["", Validators.required],
       lastName: ["", Validators.required],
-      email: ["", Validators.required
-	],
+      email: ["", Validators.required],
       username: ["", Validators.required],
       cnf_password: ["", Validators.required],
       password: ["", Validators.required]
@@ -42,8 +41,10 @@ export class RegisterComponent {
 onChange(){
    this.password_reuire = false;
    this.password_val = false;
+}
+onCnfPswdChange(){
    this.cnfpassword_reuire = false;
-      this.cnf_password_val = false;
+      this.cnf_password_val = (this.loginForm.value.password!=this.loginForm.value.cnf_password);
 }
   submit() {
     this.submitted = true;
