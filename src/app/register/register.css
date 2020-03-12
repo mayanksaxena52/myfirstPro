@@ -16,15 +16,23 @@
       }
 
       .error {
-        padding: 16px;
+        padding: 6px;
         width: 300px;
-        color: white;
-        background-color: red;
+        color: red;
+        font-size: 80%;
+        background-color: white;
       }
 
       .button {
         display: flex;
         justify-content: flex-end;
       }
+      /* .invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+} */
     
   

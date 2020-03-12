@@ -1,48 +1,72 @@
 <mat-card >
             <mat-card-title >Create Account</mat-card-title>
       <mat-card-content>
-        <form [formGroup]="form" (ngSubmit)="submit()">
+        <form [formGroup]="loginForm" (ngSubmit)="submit()">
           <p>
             <mat-form-field>
-              <input type="text" matInput placeholder="First Name" formControlName="firstName">
+              <input type="text" matInput placeholder="First Name" formControlName="firstName" />
+              <div *ngIf="submitted" class="error">
+                        <div *ngIf="loginForm.controls.firstName.invalid">First name is required</div>
+                    </div>
             </mat-form-field>
           </p>
 
           <p>
             <mat-form-field  floatPlaceholder="always">
-              <input type="text" matInput placeholder="Last Name" formControlName="lastName">
+              <input type="text" matInput placeholder="Last Name" formControlName="lastName"/>
+                <div *ngIf="submitted" class="error">
+                        <div *ngIf="loginForm.controls.lastName.invalid">Last name is required</div>
+                    </div>
             </mat-form-field>
             
           </p>
            <p>
             <mat-form-field  floatPlaceholder="always">
-              <input type="text" matInput placeholder="Email Id" formControlName="email">
+              <input type="text" matInput placeholder="Email Id" formControlName="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+              <div *ngIf="submitted" class="error">
+                        <div *ngIf="loginForm.controls.email.errors?.required">Email is required</div>
+                        <div *ngIf="loginForm.controls.email.errors?.pattern">InValid Email</div>
+                        
+                    </div>
             </mat-form-field>
             
           </p>
           <p>
             <mat-form-field>
-              <input type="text" matInput placeholder="Username" formControlName="username">
+              <input type="text" matInput placeholder="Username" formControlName="username"
+              />
+              <div *ngIf="submitted" class="error">
+                        <div *ngIf="loginForm.controls.username.invalid">Username is required</div>
+                    </div>
             </mat-form-field>
           </p>
 
-          <p>
+          <!-- (?=.*[@#$%^&+=]) -->
             <mat-form-field  floatPlaceholder="always">
-              <input type="password" matInput placeholder="Password" formControlName="password">
+              <input type="password" [type]="hide ? 'password' : 'text'" matInput placeholder="Password" formControlName="password"
+               pattern="^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[A-Z])(?=.*[a-z])([a-zA-Z0-9]+)$" (input)="onChange($event.target.value)"
+             /><mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+               <div *ngIf="submitted" class="error">
+                        <div *ngIf="password_reuire">Password is required</div>
+                        <div *ngIf="password_val">Password must be at least 6 characters</div>
+                        <div *ngIf="!password_val&&loginForm.controls.password.errors?.pattern">password should contain at least 1 uppercase character,1 lower case charachter and 1 number </div>
+                    </div>
             </mat-form-field>
             
-          </p>
+            
+          
          <p>
             <mat-form-field  floatPlaceholder="always">
-              <input type="password" matInput placeholder="Confirm Password" formControlName="cnf_password">
+              <input type="password" matInput placeholder="Confirm Password" formControlName="cnf_password" (input)="onChange($event.target.value)">
+          <div *ngIf="submitted" class="error">
+                        <div *ngIf="cnfpassword_reuire">Confirm Password is required</div>
+                        <div *ngIf="cnf_password_val">Passwords must match</div>
+                    </div>
             </mat-form-field>
             
           </p>
 
-          <p *ngIf="error" class="error">
-            {{ error }}
-          </p>
-
+        
           <div class="button">
             <button type="submit" mat-button>sign up</button>
           </div>
